@@ -13,9 +13,19 @@ Wuhan University of Technology
 
 ## 📺 Demo
 
+FuseOcc simultaneously outputs 3D semantic occupancy and BEV object detection in a single model. Below are qualitative results on three benchmarks.
+
 <div align="center">
-  <img src="assets/demo.gif" width="90%">
-  <p><em>FuseOcc simultaneously outputs 3D semantic occupancy and BEV object detection in a single model.</em></p>
+  <img src="assets/occ3d.gif" width="90%">
+  <p><em>Occ3D-nuScenes validation set</em></p>
+</div>
+<div align="center">
+  <img src="assets/openocc.gif" width="90%">
+  <p><em>nuScenes-Occupancy validation set</em></p>
+</div>
+<div align="center">
+  <img src="assets/carla.gif" width="90%">
+  <p><em>Self-built CARLA dataset</em></p>
 </div>
 
 ## 📰 News
@@ -34,8 +44,8 @@ Wuhan University of Technology
 
 <div align="center">
   <img src="assets/architecture.png" width="95%">
+  <p><em>Overall architecture of FuseOcc: dual-branch camera-LiDAR encoding, CSAFuser fusion, SGI-Module geometry injection, and dual-task output via the Occupancy Head and MS-UDH.</em></p>
 </div>
-
 ## 📊 Results
 
 ### Occupancy Prediction
