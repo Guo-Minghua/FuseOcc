@@ -5,7 +5,7 @@
 
 **Minghua Guo, Xiaofei Pei<sup>✉</sup>, Xing Wang**
 
-School of Automotive Engineering, Wuhan University of Technology
+Wuhan University of Technology
 
 </div>
 
