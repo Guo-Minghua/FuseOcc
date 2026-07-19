@@ -2,8 +2,6 @@
 
 # FuseOcc: Sparse Geometry Injection and Multi-Task Synergy for Occupancy Prediction
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
 
 **Minghua Guo, Xiaofei Pei<sup>✉</sup>, Xing Wang**
 
@@ -22,7 +20,7 @@ School of Automotive Engineering, Wuhan University of Technology
 
 ## 📰 News
 
-- **[2026-07]** 🚀 Paper released. Code and models are coming soon!
+- **[2026-07]** 🚀 Code and models are coming soon!
 
 ## 📌 Introduction
 
@@ -52,13 +50,7 @@ Auxiliary BEV detection on the nuScenes validation split: **0.6114 mAP / 0.6549 
 
 ### Ablation of the Three Core Modules (Occ3D-nuScenes)
 
-| CSAFuser | SGI-Module | MS-UDH | mIoU (%) | Δ mIoU |
-|:---:|:---:|:---:|:---:|:---:|
-| | | | 51.56 | — |
-| ✓ | | | 53.43 | +1.87 |
-| | ✓ | | 53.32 | +1.76 |
-| | | ✓ | 53.15 | +1.59 |
-| ✓ | ✓ | ✓ | **55.23** | **+3.67** |
+
 
 ### Deployment
 
@@ -104,19 +96,6 @@ data/
 bash tools/dist_train.sh configs/fuseocc/fuseocc_r50_256x704.yaml 4
 ```
 
-Key ablation switches in the config:
-
-```yaml
-model:
-  use_small_adh: true          # MS-UDH small-object auxiliary branch
-  encoders:
-    lidar:
-      backbone:
-        return_middle_feats: true   # export pre-compression 3D sparse features for SGI-Module
-  heads:
-    occ:
-      use_sparse_inject: true       # SGI-Module on/off
-```
 
 **Evaluation:**
 
@@ -144,7 +123,6 @@ If you find this work useful, please cite:
 @article{guo2026fuseocc,
   title={FuseOcc: Sparse Geometry Injection and Multi-Task Synergy for Occupancy Prediction},
   author={Guo, Minghua and Pei, Xiaofei and Wang, Xing},
-  journal={IEEE Internet of Things Journal},
   year={2026}
 }
 ```
