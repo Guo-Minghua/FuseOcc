@@ -67,7 +67,7 @@ conda create -n fuseocc python=3.8 -y
 conda activate fuseocc
 
 # PyTorch (adjust the CUDA version to your environment)
-pip install torch==2.0.1 torchvision==0.15.2 --index-url https://download.pytorch.org/whl/cu118
+pip install torch==1.10.2+cu113 torchvision==0.11.3+cu113 -f https://download.pytorch.org/whl/torch_stable.html
 
 # Dependencies (mmdet3d ecosystem)
 pip install -r requirements.txt
@@ -80,12 +80,23 @@ Detailed instructions: [docs/install.md](docs/install.md)
 Please follow [docs/dataset.md](docs/dataset.md) to prepare **Occ3D-nuScenes**, **nuScenes-Occupancy**, and the CARLA dataset.
 
 ```
-data/
-├── nuscenes/
-│   ├── samples/
-│   ├── sweeps/
-│   └── gts/            # Occ3D annotations
-└── carla/
+
+├── data/
+│   ├── nuscenes/
+│   │   ├── gts/ (new)   # Occ3D annotations
+│   │   ├── maps/
+│   │   ├── samples/
+│   │   ├── sweeps/
+│   │   ├── v1.0-test/
+│   │   ├── v1.0-trainval/
+│   ├── nuscenes_occ/ (new)   # OpenOcc annotations
+│   ├── carla/  (new)  # carla dataset
+│   │   ├── gts/ 
+│   │   ├── maps/
+│   │   ├── samples/
+│   │   ├── sweeps/
+│   │   ├── v1.0-test/
+│   │   ├── v1.0-trainval/
 ```
 
 ## 🚀 Getting Started
