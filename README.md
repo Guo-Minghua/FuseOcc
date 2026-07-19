@@ -46,6 +46,7 @@ FuseOcc simultaneously outputs 3D semantic occupancy and BEV object detection in
   <img src="assets/architecture.png" width="95%">
   <p><em>Overall architecture of FuseOcc: dual-branch camera-LiDAR encoding, CSAFuser fusion, SGI-Module geometry injection, and dual-task output via the Occupancy Head and MS-UDH.</em></p>
 </div>
+
 ## 📊 Results
 
 ### Occupancy Prediction
